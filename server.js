@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const errorHandler = require("./middleware/error");
 const colors = require("colors");
+const fileupload = require("express-fileupload");
 
 // Route
 const bootcamps = require("./routes/bootcamps");
@@ -17,6 +18,9 @@ const app = express();
 
 // body parser
 app.use(express.json());
+
+// File upload
+app.use(fileupload());
 
 // Mount router
 app.use("/api/v1/bootcamps", bootcamps);

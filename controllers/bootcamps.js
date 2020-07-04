@@ -152,3 +152,28 @@ exports.deleteBootcamps = asyncHandler(async (req, res, next) => {
     data: {},
   });
 });
+
+// @dec     Upload photo for bootcamps
+// @route   PUT /api/v2/bootcamps/:id/photo
+// @access  Public
+exports.bootcampPhotoUpload = asyncHandler(async (req, res, next) => {
+  const bootcamp = await Bootcamp.findById(req.params.id);
+
+  if (!bootcamp) {
+    return next(
+      new ErrorResponse(`bootcamp not found with ${req.params.id}`),
+      400
+    );
+  }
+
+  if (!req.files) {
+    return next(new ErrorResponse(`Please upload a file `, 400));
+  }
+
+  const file = req.files.file;
+
+  // Make sure the file is photo
+  if (!file.mimetype.startWith("image")) {
+    return next(new ErrorResponse(`Please upload an Image file `, 400));
+  }
+});
