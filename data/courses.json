@@ -1,0 +1,35 @@
+[
+  {
+    "_id": "5eff694fccfd0c17c8e03bc1",
+    "title": "Front End Web Development",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "weeks": 5,
+    "tuition": 6000,
+    "minimumSkill": "beginner",
+    "scholarshipsAvailable": true,
+    "bootcamp": "5eff694fccfd0c17c8e03bb1",
+    "user": ""
+  },
+  {
+    "_id": "5eff694fccfd0c17c8e03bc2",
+    "title": "Back End Web Development",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "weeks": 6,
+    "tuition": 9000,
+    "minimumSkill": "beginner",
+    "scholarshipsAvailable": true,
+    "bootcamp": "5eff694fccfd0c17c8e03bb2",
+    "user": ""
+  },
+  {
+    "_id": "5eff694fccfd0c17c8e03bc3",
+    "title": "Full stack Web Development",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "weeks": 9,
+    "tuition": 10000,
+    "minimumSkill": "beginner",
+    "scholarshipsAvailable": true,
+    "bootcamp": "5eff694fccfd0c17c8e03bb3",
+    "user": ""
+  }
+]

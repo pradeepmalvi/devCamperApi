@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "5eff694fccfd0c17c8e03bb1",
+    "user": "51254dd45s45d45s7",
+    "name": "spencior bootcamps",
+    "description": "helo",
+    "website": "https://devworks.io",
+    "phone": "111-111-1111",
+    "email": "enroll@devworks.com",
+    "address": "233 Bay state rd boston ma 02215",
+    "careers": ["webdevlopment", "UI/UX"],
+    "housing": true,
+    "jobAssistance": true,
+    "jobGuarantee": false,
+    "acceptGi": true,
+    "averageCost": 1000
+  },
+  {
+    "_id": "5eff694fccfd0c17c8e03bb2",
+    "user": "5125s45d45s754dd4",
+    "name": "devwork bootcamps",
+    "description": "hello",
+    "website": "https://devworks.io",
+    "phone": "111-111-1111",
+    "email": "enroll@devworks.com",
+    "address": "233 Bay state rd boston ma 02215",
+    "careers": ["webdevlopment", "UI/UX"],
+    "housing": false,
+    "jobAssistance": true,
+    "jobGuarantee": false,
+    "acceptGi": true,
+    "averageCost": 1200
+  },
+  {
+    "_id": "5eff694fccfd0c17c8e03bb3",
+    "user": "5125s45d45s754dd4",
+    "name": "hey there bootcamps",
+    "description": "hello",
+    "website": "https://devworks.io",
+    "phone": "111-111-1111",
+    "email": "enroll@devworks.com",
+    "address": "233 Bay state rd boston ma 02215",
+    "careers": ["webdevlopment", "UI/UX"],
+    "housing": false,
+    "jobAssistance": true,
+    "jobGuarantee": false,
+    "acceptGi": true,
+    "averageCost": 1300
+  }
+]
