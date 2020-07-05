@@ -4,6 +4,7 @@ const connectDB = require("./config/db");
 const errorHandler = require("./middleware/error");
 const colors = require("colors");
 const fileupload = require("express-fileupload");
+const path = require("path");
 
 // Route
 const bootcamps = require("./routes/bootcamps");
@@ -21,6 +22,9 @@ app.use(express.json());
 
 // File upload
 app.use(fileupload());
+
+// Set static folder for images
+app.use(express.static(path.join(__dirname, "public")));
 
 // Mount router
 app.use("/api/v1/bootcamps", bootcamps);
