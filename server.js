@@ -5,6 +5,7 @@ const errorHandler = require("./middleware/error");
 const colors = require("colors");
 const fileupload = require("express-fileupload");
 const path = require("path");
+const cookieParser = require("cookie-parser");
 
 // Route
 const bootcamps = require("./routes/bootcamps");
@@ -20,6 +21,9 @@ const app = express();
 
 // body parser
 app.use(express.json());
+
+// cookie parser
+app.use(cookieParser());
 
 // File upload
 app.use(fileupload());
