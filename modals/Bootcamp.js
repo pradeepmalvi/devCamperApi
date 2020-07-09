@@ -14,7 +14,7 @@ const BootcampSchema = new mongoose.Schema(
     description: {
       type: "string",
       required: [true, "Please add a description"],
-      maxlength: [50, "Name can be more than 50 character"],
+      maxlength: [500, "Name can be more than 50 character"],
     },
     website: {
       type: String,
@@ -48,6 +48,11 @@ const BootcampSchema = new mongoose.Schema(
     createdAt: {
       type: Date,
       default: Date.now,
+    },
+    user: {
+      type: mongoose.Schema.ObjectId,
+      ref: "User",
+      required: true,
     },
   },
   {

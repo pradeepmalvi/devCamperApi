@@ -2,6 +2,7 @@ const jwt = require("jsonwebtoken");
 const asyncHandler = require("./async");
 const errorResponse = require("../utils/errorResponse");
 const User = require("../modals/User");
+const ErrorResponse = require("../utils/errorResponse");
 
 // Protect routes
 exports.protect = asyncHandler(async (req, res, next) => {
@@ -36,3 +37,15 @@ exports.protect = asyncHandler(async (req, res, next) => {
     return next(new errorResponse("Not authorized", 401));
   }
 });
+
+// Grant access to specific roles
+exports.authorize = (...roles) => {
+  return (req, res, next) => {
+    if (!roles.includes(req.user.role)) {
+      return next(
+        new errorResponse(`User role ${req.user.role} is Not authorized`, 403)
+      );
+    }
+    next();
+  };
+};
