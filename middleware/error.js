@@ -11,7 +11,7 @@ const errorHandler = (err, req, res, next) => {
 
   // Mangoose bad ObjectId
   if (err.name === "CastError") {
-    const message = `Bootcamp not found with Id of ${err.value}`;
+    const message = `Resource not found`;
     error = new ErrorResponse(message, 404);
   }
 

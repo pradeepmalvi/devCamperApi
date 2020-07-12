@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const {
   getReviews,
-  createReview,
+  addReview,
   getReview,
   updateReview,
   deleteReview,
@@ -16,7 +16,7 @@ const Review = require("../modals/Review");
 router
   .route("/")
   .get(advancedResults(Review, "bootcamp"), getReviews)
-  .post(createReview);
+  .post(addReview);
 router.route("/:id").get(getReview).put(updateReview).delete(deleteReview);
 
 module.exports = router;
