@@ -3,8 +3,8 @@ const asyncHandler = require("../middleware/async");
 const ErrorResponse = require("../utils/errorResponse");
 
 // @dec     get all courses
-// @route   GET /api/v2/courses
-// @route   GET /api/v2/bootcamps/:bootcampId/courses
+// @route   GET /api/v1/courses
+// @route   GET /api/v1/bootcamps/:bootcampId/courses
 // @access  Public
 exports.getCourses = asyncHandler(async (req, res, next) => {
   // let query;
@@ -19,8 +19,8 @@ exports.getCourses = asyncHandler(async (req, res, next) => {
   res.status(200).json(res.advancedResults);
 });
 
-// @dec     get single courses
-// @route   GET /api/v2/courses/:id
+// @dec     get single course
+// @route   GET /api/v1/courses/:id
 // @access  Private
 exports.getCourse = asyncHandler(async (req, res, next) => {
   const course = await Course.findById(req.params.id).populate("bootcamp");
@@ -39,7 +39,7 @@ exports.getCourse = asyncHandler(async (req, res, next) => {
 });
 
 // @dec     Add course
-// @route   GET /api/v2/course
+// @route   GET /api/v1/course
 // @access  Private
 exports.createCourse = asyncHandler(async (req, res, next) => {
   // Add user req.body
@@ -54,7 +54,7 @@ exports.createCourse = asyncHandler(async (req, res, next) => {
 });
 
 // @dec     Update course
-// @route   GET /api/v2/course
+// @route   GET /api/v1/course
 // @access  Private
 exports.updateCourse = asyncHandler(async (req, res, next) => {
   const course = await Course.findByIdAndUpdate(req.params.id, req.body, {
@@ -86,7 +86,7 @@ exports.updateCourse = asyncHandler(async (req, res, next) => {
 });
 
 // @dec     delete course
-// @route   GET /api/v2/course
+// @route   GET /api/v1/course
 // @access  Private
 exports.deleteCourse = asyncHandler(async (req, res, next) => {
   const course = await Course.findById(req.params.id);
