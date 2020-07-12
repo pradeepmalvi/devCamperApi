@@ -69,4 +69,4 @@ const ReviewSchema = new mongoose.Schema({
 //   this.constructor.getAverageCost(this.bootcamp);
 // });
 
-module.exports = mongoose.model("Course", ReviewSchema);
+module.exports = mongoose.model("Review", ReviewSchema);
